@@ -1,0 +1,52 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1% 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid orange; /* Establece un borde superior de 2px de grosor y color naranja */
+    margin-top: 200px;
+    position: absolute;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center; /* Centra verticalmente el logo */
+    margin-left: 5%; /* Ajusta el margen izquierdo del logo */
+  }
+  
+  .logo img {
+    width: 120px; /* Ajusta el tamaño del logo según tus necesidades */
+ 
+  }
+  
+  .footer ul {
+    margin: 0; /* Elimina los márgenes predeterminados */
+    padding: 0; /* Elimina el relleno predeterminado */
+    display: flex;
+    flex-direction: column; /* Los elementos de la lista se mostrarán uno encima del otro */
+    align-items: center; /* Centra horizontalmente los elementos de la lista */
+  }
+  
+  ul li {
+    margin: 10px 0; /* Ajusta el espacio entre los elementos de la lista */
+    list-style: none;
+  }
+  
+  ul li a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .name {
+    margin-right: 5%; /* Ajusta el margen derecho del nombre */
+    text-align: center;
+  }
+  body{
+    position: relative;
+    padding-bottom: 150px;
+    min-height: 100vh;
+}
