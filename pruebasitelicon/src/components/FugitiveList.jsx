@@ -20,6 +20,7 @@ export const FugitiveList = () => {
             const fugitivesData = response.items && Array.isArray(response.items) ? response.items : [];
             setFugitives(fugitivesData);
             setFilteredFugitives(fugitivesData);
+            console.log(fugitivesData);
         } catch (error) {
             console.error('Error fetching fugitives:', error);
         }

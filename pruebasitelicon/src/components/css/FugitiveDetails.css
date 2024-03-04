@@ -5,6 +5,7 @@
     background-color: white;
    margin-left: 5%;
    margin-right: 5%;
+   background-color: orange;
 }
 .contenedor-abajo {
     margin-left: 5%;
@@ -22,6 +23,7 @@
 width: 100%;
 border: 1px solid black;
 margin-top: 3%;
+background-color: orange;
   }
   
   .div-imagen {
