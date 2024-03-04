@@ -32,9 +32,8 @@ export const FugitiveList = () => {
 
     useEffect(() => {
         const filtered = fugitives.filter(fugitive =>
-            fugitive.title.toLowerCase().includes(searchTerm.toLowerCase())||
-            fugitive.sex.toLowerCase().includes(searchTerm) ||  // Agregar búsqueda por género
-          fugitive.nationality.toLowerCase().includes(searchTerm)  // Agregar búsqueda por nacionalidad
+            fugitive.title.toLowerCase().includes(searchTerm.toLowerCase())
+            
         );
         setFilteredFugitives(filtered);
     }, [searchTerm, fugitives]);
