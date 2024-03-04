@@ -26,18 +26,19 @@ export const FugitiveList = () => {
     }, []);
 
     const handleSearchChange = (event) => {
-        setSearchTerm(event.target.value);
+        const searchTerm = event.target.value.toLowerCase();
+        setSearchTerm(searchTerm);
         setCurrentPage(1); // Reiniciar la página actual al cambiar el término de búsqueda
-    };
-
-    useEffect(() => {
+    
         const filtered = fugitives.filter(fugitive =>
-            fugitive.title.toLowerCase().includes(searchTerm.toLowerCase())
-            
+            (fugitive.title && fugitive.title.toLowerCase().includes(searchTerm)) ||
+            (fugitive.sex && fugitive.sex.toLowerCase().includes(searchTerm)) ||  
+            (fugitive.nationality && fugitive.nationality.toLowerCase().includes(searchTerm))  
+            // Puedes agregar más campos aquí para realizar la búsqueda
         );
         setFilteredFugitives(filtered);
-    }, [searchTerm, fugitives]);
-
+    };
+    
     const lastIndex = currentPage * fugitivesPerPage;
     const firstIndex = lastIndex - fugitivesPerPage;
     const currentFugitives = filteredFugitives.slice(firstIndex, lastIndex);
