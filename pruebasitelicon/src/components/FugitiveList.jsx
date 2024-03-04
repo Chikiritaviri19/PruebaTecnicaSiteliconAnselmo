@@ -33,8 +33,11 @@ export const FugitiveList = () => {
         const filtered = fugitives.filter(fugitive =>
             (fugitive.title && fugitive.title.toLowerCase().includes(searchTerm)) ||
             (fugitive.sex && fugitive.sex.toLowerCase().includes(searchTerm)) ||  
-            (fugitive.nationality && fugitive.nationality.toLowerCase().includes(searchTerm))  
-            // Puedes agregar más campos aquí para realizar la búsqueda
+            (fugitive.nationality && fugitive.nationality.toLowerCase().includes(searchTerm))  ||
+            (fugitive.hair && fugitive.hair.toLowerCase().includes(searchTerm)) ||
+            (fugitive.eyes && fugitive.eyes.toLowerCase().includes(searchTerm)) ||
+            (fugitive.age_min && fugitive.age_min.toString().toLowerCase().includes(searchTerm)) ||
+            (fugitive.age_max && fugitive.age_max.toString().toLowerCase().includes(searchTerm))
         );
         setFilteredFugitives(filtered);
     };
@@ -64,10 +67,15 @@ export const FugitiveList = () => {
                         </figure>
                         <div className="info-fugitive">
                             <h3>{fugitive.title}</h3>
-                            <p className='sex'>{fugitive.sex}</p>
-                            <p className='sex'>{fugitive.nationality}</p>
+                            <p className='sex'>Sex: {fugitive.sex ? fugitive.sex : "Unknown"}</p>
+    <p className='sex'>Nationality: {fugitive.nationality ? fugitive.nationality : "Unknown"}</p>
+    <p className='sex'>Hair: {fugitive.hair ? fugitive.hair : "Unknown"}</p>
+    <p className='sex'>Eyes: {fugitive.eyes ? fugitive.eyes : "Unknown"}</p>
+    <p className='sex'>Age_min: {fugitive.age_min ? fugitive.age_min : "Unknown"}</p>
+    <p className='sex'>Age_max: {fugitive.age_max ? fugitive.age_max : "Unknown"}</p>
                         </div>
                     </div>
+                    
                 ))}
             </div>
             <Pagination 
