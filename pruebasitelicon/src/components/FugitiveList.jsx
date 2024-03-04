@@ -1,7 +1,11 @@
+// FugitiveList.jsx
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Pagination } from './Pagination';
+
 import './css/FugitiveList.css';
 import './css/SearchBar.css';
+
 export const FugitiveList = () => {
     const [fugitives, setFugitives] = useState([]); 
     const [searchTerm, setSearchTerm] = useState('');
@@ -60,22 +64,23 @@ export const FugitiveList = () => {
             <div className="container-fugitives">
                 {currentFugitives.map(fugitive => (
                     <div key={fugitive.uid} className="card-fugitive">
-                        <figure className="container-img">
-                            {fugitive.images && fugitive.images.length > 0 && (
-                                <img src={fugitive.images[0].thumb} alt={fugitive.title} />
-                            )}
-                        </figure>
-                        <div className="info-fugitive">
-                            <h3>{fugitive.title}</h3>
-                            <p className='sex'>Sex: {fugitive.sex ? fugitive.sex : "Unknown"}</p>
-    <p className='sex'>Nationality: {fugitive.nationality ? fugitive.nationality : "Unknown"}</p>
-    <p className='sex'>Hair: {fugitive.hair ? fugitive.hair : "Unknown"}</p>
-    <p className='sex'>Eyes: {fugitive.eyes ? fugitive.eyes : "Unknown"}</p>
-    <p className='sex'>Age_min: {fugitive.age_min ? fugitive.age_min : "Unknown"}</p>
-    <p className='sex'>Age_max: {fugitive.age_max ? fugitive.age_max : "Unknown"}</p>
-                        </div>
+                        <Link to={`/fugitives/${fugitive.uid}`} className="card-link"> {/* Enlace al detalle del fugitivo */}
+                            <figure className="container-img">
+                                {fugitive.images && fugitive.images.length > 0 && (
+                                    <img src={fugitive.images[0].thumb} alt={fugitive.title} />
+                                )}
+                            </figure>
+                            <div className="info-fugitive">
+                                <h3>{fugitive.title}</h3>
+                                <p className='sex'>Sex: {fugitive.sex ? fugitive.sex : "Unknown"}</p>
+                                <p className='sex'>Nationality: {fugitive.nationality ? fugitive.nationality : "Unknown"}</p>
+                                <p className='sex'>Hair: {fugitive.hair ? fugitive.hair : "Unknown"}</p>
+                                <p className='sex'>Eyes: {fugitive.eyes ? fugitive.eyes : "Unknown"}</p>
+                                <p className='sex'>Age_min: {fugitive.age_min ? fugitive.age_min : "Unknown"}</p>
+                                <p className='sex'>Age_max: {fugitive.age_max ? fugitive.age_max : "Unknown"}</p>
+                            </div>
+                        </Link>
                     </div>
-                    
                 ))}
             </div>
             <Pagination 

@@ -1,0 +1,130 @@
+.contenedor-arriba {
+    display: flex;
+    justify-content: space-between; /* Coloca los elementos a los extremos */
+    align-items: center; /* Centra verticalmente los elementos */
+    background-color: white;
+   margin-left: 5%;
+   margin-right: 5%;
+}
+.contenedor-abajo {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.fugitive-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  
+  }
+  
+  .contenedor-todo {
+width: 100%;
+border: 1px solid black;
+margin-top: 3%;
+  }
+  
+  .div-imagen {
+
+ 
+    width: 25%;
+  }
+  
+  .div-datos {
+    text-align: center;
+
+    width: 75%;
+    height: 100%;
+  }
+  
+  .detalles {
+    width: 100%;
+    margin-top: 20px;
+
+  }
+  
+  .contenedor-de-fotos {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+  }
+  
+  .foto1,
+  .foto2,
+  .foto3,
+  .foto4 {
+    width: calc(25% - 10px);
+    margin-bottom: 20px;
+  
+    
+  }
+ 
+ .foto1  img{
+    width: 100%;
+    height: 100%;
+  }
+  .foto2  img{
+    width: 100%;
+    height: 100%;
+  }
+  .foto3  img{
+    width: 100%;
+    height: 100%;
+  }
+  .foto4  img{
+    width: 100%;
+    height: 100%;
+  }
+  .foto1,
+  .foto2 {
+    height: 200px;
+  }
+/* FugitiveDetails.css */
+.contenedor-todo {
+    position: relative; /* Establecer posición relativa para que el botón se coloque correctamente */
+}
+
+.close-button {
+    font-size: 24px; /* Tamaño de la fuente más grande */
+    color: white; /* Color del texto */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    border: none; /* Sin borde */
+    border-radius: 50%; /* Forma redondeada */
+    width: 40px; /* Ancho */
+    height: 40px; /* Altura */
+    display: flex; /* Para centrar la X verticalmente */
+    justify-content: center; /* Para centrar la X horizontalmente */
+    align-items: center; /* Para centrar la X verticalmente */
+    text-decoration: none; /* Sin subrayado */
+    position: absolute; /* Posicionamiento absoluto */
+    top: 10px; /* Distancia desde la parte superior */
+    right: 10px; /* Distancia desde la derecha */
+}
+
+.close-button:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Cambio de color al pasar el ratón */
+    cursor: pointer; /* Cursor de puntero al pasar el ratón */
+}
+@media screen and (max-width: 768px) {
+    .contenedor-todo {
+        margin-left: 0; /* Eliminar el margen izquierdo */
+        margin-right: 0; /* Eliminar el margen derecho */
+    }
+
+    .div-imagen {
+        width: 100%; /* Ajustar el ancho al 100% */
+    }
+
+    .div-datos {
+        width: 100%; /* Ajustar el ancho al 100% */
+    }
+
+    .foto1,
+    .foto2,
+    .foto3,
+    .foto4 {
+        width: 100%; /* Ajustar el ancho al 100% */
+    }
+}

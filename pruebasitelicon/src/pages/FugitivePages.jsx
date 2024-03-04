@@ -1,21 +1,17 @@
-import React, { useState, useEffect } from 'react';
+// FugitivesPage.jsx
+import React from 'react';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
+import { FugitiveList } from '../components/FugitiveList'; // Ajusta la importación según la ubicación de tu componente
 
+const FugitivePages = () => {
+  return (
+    <div className="FugitivePages">
+      <NavBar />
+      <FugitiveList />
+      <Footer />
+    </div>
+  );
+};
 
-
-import { FugitiveList } from '../components/FugitiveList';
-function FugitivesPage() {
-    return (
-      <div className="FugitivesPage">
-        <NavBar />
-      
-    
-        <FugitiveList/>
-   
-        <Footer />
-      </div>
-    );
-  }
-  
-  export default FugitivesPage;
+export default FugitivePages;
